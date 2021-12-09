@@ -1,8 +1,9 @@
 #deminsions are h 400, w 350
 from turtle import *
 from random import randint
-h = randint(0,1)
 g = 31
+def h():
+  randint(0,1)
 penup()
 right(90)
 forward(200)
@@ -80,13 +81,13 @@ for i in range(17):
     forward(10)
     pendown()
     for i in range(g):
-        if h == 0:
+        if h() == 0:
             penup()
             forward(10)
             pendown()
-            g -=1
-        elif h == 1:
+            h()
+        elif h() == 1:
             pendown()
             forward(10)
-            g -=1
-    
+            h()
+        g -=2
